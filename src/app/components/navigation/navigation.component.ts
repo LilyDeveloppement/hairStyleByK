@@ -10,10 +10,16 @@ import { MainContentComponent } from '../main-content/main-content.component';
 
 @Component({
   selector: 'app-navigation',
-  imports: [RouterModule, MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule, MainContentComponent],
+  imports: [
+    RouterModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+  ],
   templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.scss'
+  styleUrl: './navigation.component.scss',
 })
-export class NavigationComponent {
-
-}
+export class NavigationComponent {}

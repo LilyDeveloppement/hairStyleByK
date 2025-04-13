@@ -1,12 +1,57 @@
-@use "../../../styles/custom-theme.scss" as theme;
-@use "@angular/material" as mat;
+@use "../../../styles/custom-theme.scss" as *;
 
 .main-content {
   min-height: calc(
     100vh - 64px
   ); // Hauteur totale moins la hauteur de la toolbar
-  padding: 20px;
   box-sizing: border-box;
-  background-color: map-get(theme.$backgroundPalette, 500);
-  color: mat.get-contrast-color-from-palette(theme.$backgroundPalette, 500);
+  background-color: map-get($background-palette, 300);
+  color: map-get($background-palette, 500);
+  background-image: url("./../../../assets/coiffure.jpg");
+  height: 40em;
+  background-size: cover;
+  width: auto;
+  background-position: 50% 50%;
+}
+
+.btn {
+  position: absolute;
+  bottom: 20vh;
+  padding: 10px 20px;
+
+  left: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+/* 1. Pulse Animation */
+.btn-pulse {
+  background-color: map-get($contrast, 500);
+  color: map-get($primary-palette, 500);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.container-service {
+  display: flex;
+  justify-content: space-around;
+
+  .card-service {
+    background-color: map-get($contrast, 500);
+    width: 25%;
+    padding: 1rem;
+    border-radius: 5%;
+  }
 }

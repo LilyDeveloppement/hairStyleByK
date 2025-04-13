@@ -1,4 +1,3 @@
-@use "../../../styles/custom-theme.scss" as theme;
 @use "../../../styles/custom-theme.scss" as *;
 
 .sidenav-container {
@@ -38,8 +37,7 @@
 }
 
 .mat-sidenav-content {
-  padding: 20px;
-  background-color: map-get($background-palette, 500);
+  background-color: map-get($background-palette, 100);
 }
 .toolbar-title {
   font-family: "Whisper", cursive;
