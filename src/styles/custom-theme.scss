@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 // Palette Terracotta (couleur principale) - Version plus marron
 $primary-palette: (
@@ -7,7 +7,8 @@ $primary-palette: (
   200: #d6a490,
   300: #c67f64,
   400: #b96442,
-  500: #ad4921, // Terracotta principal plus marron
+  500: #ad4921,
+  // Terracotta principal plus marron
   600: #a6421d,
   700: #9c3918,
   800: #933114,
@@ -23,7 +24,7 @@ $primary-palette: (
     700: white,
     800: white,
     900: white,
-  )
+  ),
 );
 
 // Palette Vieux Rose (couleur d'accent) - Version plus douce
@@ -33,7 +34,8 @@ $accent-palette: (
   200: #f48fb1,
   300: #f06292,
   400: #ec407a,
-  500: #e91e63, // Vieux rose principal
+  500: #e91e63,
+  // Vieux rose principal
   600: #d81b60,
   700: #c2185b,
   800: #ad1457,
@@ -49,7 +51,7 @@ $accent-palette: (
     700: white,
     800: white,
     900: white,
-  )
+  ),
 );
 
 // Palette Beige Orangé (couleur d'arrière-plan)
@@ -59,7 +61,8 @@ $background-palette: (
   200: #ffddbf,
   300: #ffcfa5,
   400: #ffc591,
-  500: #ffbb7d, // Beige orangé principal
+  500: #ffbb7d,
+  // Beige orangé principal
   600: #ffb575,
   700: #ffac6b,
   800: #ffa461,
@@ -75,31 +78,37 @@ $background-palette: (
     700: rgba(black, 0.87),
     800: rgba(black, 0.87),
     900: rgba(black, 0.87),
-  )
+  ),
 );
 
 // Création des palettes de couleurs
-$custom-primary: mat.define-palette($primary-palette);
-$custom-accent: mat.define-palette($accent-palette);
-$custom-warn: mat.define-palette(mat.$red-palette);
+$custom-primary: mat.m2-define-palette($primary-palette);
+$custom-accent: mat.m2-define-palette($accent-palette);
+$custom-warn: mat.m2-define-palette($accent-palette);
 
 // Création du thème
-$custom-theme: mat.define-light-theme((
-  color: (
-    primary: $custom-primary,
-    accent: $custom-accent,
-    warn: $custom-warn,
-  ),
-  typography: mat.define-typography-config(),
-  density: 0,
-));
+$custom-theme: mat.m2-define-light-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
+    ),
+    typography: mat.m2-define-typography-config(),
+    density: 0,
+  )
+);
+
+$contrast: (
+  500: white,
+);
 
 // Application du thème
 @include mat.all-component-themes($custom-theme);
 
 // Export des variables pour utilisation dans d'autres fichiers
-:export {
+/*  :export {
   primaryPalette: $primary-palette;
   accentPalette: $accent-palette;
   backgroundPalette: $background-palette;
-}
+}  */

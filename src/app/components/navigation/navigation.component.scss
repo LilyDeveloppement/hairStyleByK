@@ -1,13 +1,13 @@
-@use '../../../styles/custom-theme.scss' as theme;
+@use "../../../styles/custom-theme.scss" as theme;
+@use "../../../styles/custom-theme.scss" as *;
 
 .sidenav-container {
   height: calc(100vh - 64px);
-  margin-top: 64px;
 }
 
 .sidenav {
   width: 250px;
-  background-color: map-get(theme.$backgroundPalette, 100);
+  background-color: map-get($background-palette, 100);
   border-right: none;
 }
 
@@ -23,21 +23,26 @@
   margin-left: 5%;
 
   &:hover {
-    background-color: map-get(theme.$backgroundPalette, 200);
+    background-color: map-get($background-palette, 200);
   }
 
   &.active {
-    background-color: map-get(theme.$primaryPalette, 100);
-    color: map-get(theme.$primaryPalette, 500);
+    background-color: map-get($primary-palette, 100);
+    color: map-get($primary-palette, 500);
   }
 }
 
 .mat-icon {
   margin-right: 16px;
-  color: map-get(theme.$primaryPalette, 500);
+  color: white;
 }
 
 .mat-sidenav-content {
   padding: 20px;
-  background-color: map-get(theme.$backgroundPalette, 500);
+  background-color: map-get($background-palette, 500);
+}
+.toolbar-title {
+  font-family: "Whisper", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

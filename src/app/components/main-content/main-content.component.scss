@@ -1,0 +1,12 @@
+@use "../../../styles/custom-theme.scss" as theme;
+@use "@angular/material" as mat;
+
+.main-content {
+  min-height: calc(
+    100vh - 64px
+  ); // Hauteur totale moins la hauteur de la toolbar
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: map-get(theme.$backgroundPalette, 500);
+  color: mat.get-contrast-color-from-palette(theme.$backgroundPalette, 500);
+}
