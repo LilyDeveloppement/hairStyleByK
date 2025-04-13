@@ -1,0 +1,105 @@
+@use '@angular/material' as mat;
+
+// Palette Terracotta (couleur principale) - Version plus marron
+$primary-palette: (
+  50: #f5e9e4,
+  100: #e6c8bc,
+  200: #d6a490,
+  300: #c67f64,
+  400: #b96442,
+  500: #ad4921, // Terracotta principal plus marron
+  600: #a6421d,
+  700: #9c3918,
+  800: #933114,
+  900: #83210b,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+
+// Palette Vieux Rose (couleur d'accent) - Version plus douce
+$accent-palette: (
+  50: #fce4ec,
+  100: #f8bbd0,
+  200: #f48fb1,
+  300: #f06292,
+  400: #ec407a,
+  500: #e91e63, // Vieux rose principal
+  600: #d81b60,
+  700: #c2185b,
+  800: #ad1457,
+  900: #880e4f,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+
+// Palette Beige Orangé (couleur d'arrière-plan)
+$background-palette: (
+  50: #fff8f2,
+  100: #ffebd9,
+  200: #ffddbf,
+  300: #ffcfa5,
+  400: #ffc591,
+  500: #ffbb7d, // Beige orangé principal
+  600: #ffb575,
+  700: #ffac6b,
+  800: #ffa461,
+  900: #ff964e,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(black, 0.87),
+    700: rgba(black, 0.87),
+    800: rgba(black, 0.87),
+    900: rgba(black, 0.87),
+  )
+);
+
+// Création des palettes de couleurs
+$custom-primary: mat.define-palette($primary-palette);
+$custom-accent: mat.define-palette($accent-palette);
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+// Création du thème
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+// Application du thème
+@include mat.all-component-themes($custom-theme);
+
+// Export des variables pour utilisation dans d'autres fichiers
+:export {
+  primaryPalette: $primary-palette;
+  accentPalette: $accent-palette;
+  backgroundPalette: $background-palette;
+}
