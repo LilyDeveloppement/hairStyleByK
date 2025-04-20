@@ -5,12 +5,12 @@
     </button>
     <span class="toolbar-title">HairStyleByK</span>
 
-    <span class="spacer"></span>
+<!--     <span class="spacer"></span>
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>account_circle</mat-icon>
-    </button>
+    </button> -->
  
-  <mat-menu #menu="matMenu">
+<!--   <mat-menu #menu="matMenu">
     <button mat-menu-item>
       <mat-icon>person</mat-icon>
       <span>Mon compte</span>
@@ -23,7 +23,7 @@
       <mat-icon>exit_to_app</mat-icon>
       <span>Déconnexion</span>
     </button>
-  </mat-menu>
+  </mat-menu> -->
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
@@ -45,7 +45,7 @@
         <mat-icon matListItemIcon>contact_mail</mat-icon>
         <span matListItemTitle>Contact</span>
       </a>
-      <a mat-list-item routerLink="/rendez-vous" routerLinkActive="active">
+      <a mat-list-item routerLink="/reservation" routerLinkActive="active">
         <mat-icon matListItemIcon>event</mat-icon>
         <span matListItemTitle>Rendez-vous</span>
       </a>
