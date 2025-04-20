@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { MainContentComponent } from '../main-content/main-content.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-navigation',
@@ -18,6 +19,7 @@ import { MainContentComponent } from '../main-content/main-content.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
+    FooterComponent
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
