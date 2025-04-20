@@ -1,12 +1,15 @@
 <mat-toolbar color="primary" class="navigation-toolbar">
-  <button mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span class="toolbar-title">HairStyleByK</span>
-  <span class="spacer"></span>
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>account_circle</mat-icon>
-  </button>
+  
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="toolbar-title">HairStyleByK</span>
+
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+ 
   <mat-menu #menu="matMenu">
     <button mat-menu-item>
       <mat-icon>person</mat-icon>
@@ -51,5 +54,6 @@
 
   <mat-sidenav-content>
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

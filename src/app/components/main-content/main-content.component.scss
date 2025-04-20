@@ -19,7 +19,7 @@
   bottom: 20vh;
   padding: 10px 20px;
 
-  left: 50%;
+  left: calc(50% - 74px);
   border: none;
   cursor: pointer;
   font-size: 24px;
@@ -30,6 +30,7 @@
   background-color: map-get($contrast, 500);
   color: map-get($primary-palette, 500);
   animation: pulse 1.5s infinite;
+  border-radius: 20;
 }
 
 @keyframes pulse {
@@ -51,6 +52,7 @@
   .card-service {
     background-color: map-get($contrast, 500);
     width: 25vw;
+    margin-bottom: 30px;
 
     padding: 1rem;
     border-radius: 5%;

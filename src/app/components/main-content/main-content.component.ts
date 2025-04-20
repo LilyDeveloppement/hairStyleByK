@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-main-content',
@@ -7,5 +7,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
+  router = inject(Router);
+
+  booking():void{
+  this.router.navigate(['./reservation'])
+  }
 
 }
