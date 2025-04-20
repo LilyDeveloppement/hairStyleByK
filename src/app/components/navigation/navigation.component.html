@@ -1,16 +1,15 @@
 <mat-toolbar color="primary" class="navigation-toolbar">
-  
-    <button mat-icon-button (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span class="toolbar-title">HairStyleByK</span>
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="toolbar-title">HairStyleByK</span>
 
-<!--     <span class="spacer"></span>
+  <!--     <span class="spacer"></span>
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>account_circle</mat-icon>
     </button> -->
- 
-<!--   <mat-menu #menu="matMenu">
+
+  <!--   <mat-menu #menu="matMenu">
     <button mat-menu-item>
       <mat-icon>person</mat-icon>
       <span>Mon compte</span>
@@ -33,7 +32,7 @@
         <mat-icon matListItemIcon>home</mat-icon>
         <span matListItemTitle>Accueil</span>
       </a>
-      <a mat-list-item routerLink="/services" routerLinkActive="active">
+      <a mat-list-item (click)="navigateToServices()">
         <mat-icon matListItemIcon>spa</mat-icon>
         <span matListItemTitle>Nos services</span>
       </a>
@@ -41,10 +40,10 @@
         <mat-icon matListItemIcon>photo_library</mat-icon>
         <span matListItemTitle>Galerie</span>
       </a>
-      <a mat-list-item routerLink="/contact" routerLinkActive="active">
+<!--       <a mat-list-item routerLink="/contact" routerLinkActive="active">
         <mat-icon matListItemIcon>contact_mail</mat-icon>
         <span matListItemTitle>Contact</span>
-      </a>
+      </a> -->
       <a mat-list-item routerLink="/reservation" routerLinkActive="active">
         <mat-icon matListItemIcon>event</mat-icon>
         <span matListItemTitle>Rendez-vous</span>

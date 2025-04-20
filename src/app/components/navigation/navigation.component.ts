@@ -5,7 +5,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { MainContentComponent } from '../main-content/main-content.component';
 import { FooterComponent } from '../footer/footer.component';
 
@@ -19,9 +19,25 @@ import { FooterComponent } from '../footer/footer.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
 })
-export class NavigationComponent {}
+export class NavigationComponent {
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+
+  constructor(private router: Router) {}
+
+  navigateToServices() {
+    this.sidenav.close();
+    this.router.navigate(['/accueil']).then(() => {
+      setTimeout(() => {
+        const element = document.getElementById('services');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    });
+  }
+}
