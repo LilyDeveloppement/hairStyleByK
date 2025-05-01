@@ -26,11 +26,15 @@
 
 .footer-section {
   margin-bottom: 30px;
+  text-align: center;
 
   ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     li {
       margin-bottom: 10px;
@@ -39,11 +43,20 @@
   }
 }
 
+.footer-section.social {
+  ul {
+    flex-direction: row;
+  }
+
+}
+
 // Réseaux sociaux
 .social-links {
   display: flex;
+  flex-direction: row;
   gap: 15px;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .social-icon {
@@ -114,7 +127,9 @@
 }
 
 .copyright {
+  text-align: center;
   margin-top: 40px;
+  padding-bottom: 40px;
   font-size: 0.9em;
   opacity: 0.8;
 }
