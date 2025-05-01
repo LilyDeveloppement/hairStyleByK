@@ -12,6 +12,20 @@
   background-size: cover;
   width: auto;
   background-position: 50% 50%;
+  position: relative;
+}
+
+.main-content h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -24,13 +38,13 @@
   cursor: pointer;
   font-size: 24px;
   transition: all 0.3s ease;
+  border-radius: 5px;
 }
 /* 1. Pulse Animation */
 .btn-pulse {
   background-color: map-get($contrast, 500);
   color: map-get($primary-palette, 500);
   animation: pulse 1.5s infinite;
-  border-radius: 20;
 }
 
 @keyframes pulse {
@@ -48,23 +62,43 @@
 .container-service {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   .card-service {
     background-color: map-get($contrast, 500);
     width: 25vw;
     margin-bottom: 30px;
-
     padding: 1rem;
     border-radius: 5%;
+
     .img-container {
       img {
         width: 300px;
         height: 300px;
-
         object-fit: cover;
         margin: auto;
-
         display: block;
+      }
+    }
+  }
+}
+
+// Media query pour les petits écrans
+@media screen and (max-width: 768px) {
+  .container-service {
+    flex-direction: column;
+    align-items: center;
+
+    .card-service {
+      width: 80vw;
+      margin: 20px 0;
+
+      .img-container {
+        img {
+          width: 100%;
+          height: auto;
+          max-height: 300px;
+        }
       }
     }
   }

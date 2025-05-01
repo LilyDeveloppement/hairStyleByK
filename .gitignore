@@ -46,3 +46,9 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+src/environments/environment.prod.ts
+src/environments/environment.ts
+firebase.json
+src/environments/environment.prod.ts
+src/environments/environment.ts
+.firebaserc
