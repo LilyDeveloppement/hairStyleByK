@@ -25,7 +25,6 @@
 }
 
 .footer-section {
-  margin-bottom: 30px;
   text-align: center;
 
   ul {
@@ -47,7 +46,6 @@
   ul {
     flex-direction: row;
   }
-
 }
 
 // Réseaux sociaux
@@ -120,8 +118,7 @@
     align-self: center;
 
     &:hover {
-      background-color: black;
-      color: #f4b63c;
+      color: map-get($primary-palette, 500);
     }
   }
 }
@@ -140,18 +137,17 @@
     flex-direction: column;
   }
 
-  .footer-left,
-  .footer-right {
-    width: 100%;
-    padding: 20px;
-  }
-
   .contact-form {
     input,
     textarea {
       width: 100%;
       box-sizing: border-box;
     }
+  }
+
+  .footer-left,
+  .footer-right {
+    padding: 0 20px 0 20px;
   }
 
   .social-links {
