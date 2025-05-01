@@ -1,7 +1,8 @@
 @use "../../../styles/custom-theme.scss" as *;
+@use "sass:map";
 
 .footer {
-  background-color: map-get($primary-palette, 500);
+  background-color: map.get($primary-palette, 500);
   color: white;
   width: 100%;
   box-sizing: border-box;
@@ -74,6 +75,7 @@
 
   &:hover {
     transform: scale(1.1);
+    color: map.get($primary-palette, 500);
   }
 }
 
@@ -118,7 +120,7 @@
     align-self: center;
 
     &:hover {
-      color: map-get($primary-palette, 500);
+      color: map.get($primary-palette, 500);
     }
   }
 }

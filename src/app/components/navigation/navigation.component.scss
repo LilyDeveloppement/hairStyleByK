@@ -1,4 +1,5 @@
 @use "../../../styles/custom-theme.scss" as *;
+@use "sass:map";
 
 .spacer {
   flex: 1 1 auto;
@@ -9,7 +10,7 @@
 
 .sidenav {
   width: 250px;
-  background-color: map-get($background-palette, 100);
+  background-color: map.get($background-palette, 100);
   border-right: none;
 }
 
@@ -25,12 +26,12 @@
   margin-left: 5%;
 
   &:hover {
-    background-color: map-get($background-palette, 200);
+    background-color: map.get($background-palette, 200);
   }
 
   &.active {
-    background-color: map-get($primary-palette, 100);
-    color: map-get($primary-palette, 500);
+    background-color: map.get($primary-palette, 100);
+    color: map.get($primary-palette, 500);
   }
 }
 
@@ -40,7 +41,7 @@
 }
 
 .mat-sidenav-content {
-  background-color: map-get($background-palette, 100);
+  background-color: map.get($background-palette, 100);
 }
 .toolbar-title {
   font-family: "Whisper", cursive;

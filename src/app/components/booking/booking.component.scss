@@ -1,9 +1,10 @@
 @use "../../../styles/custom-theme.scss" as *;
+@use "sass:map";
 
 .booking-container {
   max-width: 800px;
- margin: 2rem auto;
- // padding: 2rem;
+  margin: 2rem auto;
+  // padding: 2rem;
 
   h2 {
     font-size: 1.5rem;
@@ -81,8 +82,8 @@
 }
 
 .submit-btn {
-  background-color: map-get($primary-palette, 500);
-  color: map-get($contrast, 500);
+  background-color: map.get($primary-palette, 500);
+  color: map.get($contrast, 500);
   padding: 1rem;
   border: none;
   border-radius: 5px;
@@ -91,10 +92,24 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: map-get($primary-palette, 600);
+    background-color: map.get($primary-palette, 600);
   }
 }
 
 input.ng-invalid.ng-touched {
   border: solid 1px red;
+}
+
+.btn {
+  background-color: map.get($primary-palette, 500);
+  color: map.get($contrast, 500);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: map.get($primary-palette, 600);
+  }
 }

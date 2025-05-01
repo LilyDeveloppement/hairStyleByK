@@ -1,12 +1,13 @@
 @use "../../../styles/custom-theme.scss" as *;
+@use "sass:map";
 
 .main-content {
   min-height: calc(
     100vh - 64px
   ); // Hauteur totale moins la hauteur de la toolbar
   box-sizing: border-box;
-  background-color: map-get($background-palette, 300);
-  color: map-get($background-palette, 500);
+  background-color: map.get($background-palette, 300);
+  color: map.get($background-palette, 500);
   background-image: url("./../../../assets/coiffure.jpg");
   height: 40em;
   background-size: cover;
@@ -42,9 +43,10 @@
 }
 /* 1. Pulse Animation */
 .btn-pulse {
-  background-color: map-get($contrast, 500);
-  color: map-get($primary-palette, 500);
+  background-color: map.get($contrast, 500);
+  color: map.get($primary-palette, 500);
   animation: pulse 1.5s infinite;
+  border-radius: 5px;
 }
 
 @keyframes pulse {
@@ -65,7 +67,7 @@
   flex-wrap: wrap;
 
   .card-service {
-    background-color: map-get($contrast, 500);
+    background-color: map.get($contrast, 500);
     width: 25vw;
     margin-bottom: 30px;
     padding: 1rem;
